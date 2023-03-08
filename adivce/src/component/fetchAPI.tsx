@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import styles from './fetchAPI.module.scss'
 import './fetch.css'
 import axios from 'axios'
-import { CSSTransition } from 'react-transition-group'
 
 export default function FetchAPI(props: { change: boolean }) {
   const { change } = props
@@ -21,9 +20,5 @@ export default function FetchAPI(props: { change: boolean }) {
     fetchAPI()
   }, [change])
   console.log('render')
-  return (
-    <CSSTransition in={true} timeout={1000} className='quote'>
-      <h3 className='quote'>{advice}</h3>
-    </CSSTransition>
-  )
+  return <h3 className='quote'>{advice}</h3>
 }
