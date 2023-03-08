@@ -1,0 +1,26 @@
+.quote {
+  margin: 1.5rem 0;
+  font-size: 24px;
+  color: hsl(193, 38%, 86%);
+}
+
+.quote-enter {
+  opacity: 0;
+}
+.quote-enter-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.quote-enter-done {
+  opacity: 1;
+}
+.quote-enter-exit {
+  opacity: 0;
+}
+.quote-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+.quote-exit-dont {
+  opacity: 0;
+}

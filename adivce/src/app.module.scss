@@ -1,0 +1,47 @@
+@use './variables.module' as var;
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+.app {
+  background-color: var.$Dark-Blue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope';
+  .card {
+    width: 28rem;
+    background-color: var.$Dark-Grayish-blue;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    position: relative;
+    .name {
+      color: var.$Neon-Green;
+      font-size: 0.625rem;
+      letter-spacing: 0.25rem;
+    }
+    .quote {
+      margin: 1.25rem 0;
+      font-size: 24px;
+      color: var.$Light-Cyan;
+    }
+    .divider {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+    .dice {
+      padding: 1rem;
+      border-radius: 50%;
+      background-color: var.$Neon-Green;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 50%);
+      transition: 0.3s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 35px 6px rgba(0, 168, 84, 1);
+      }
+    }
+  }
+}
