@@ -15,7 +15,6 @@ export default function FetchAPI(props: { change: boolean }) {
       console.log(error)
     }
   }
-
   useEffect(() => {
     fetchAPI()
   }, [change])
