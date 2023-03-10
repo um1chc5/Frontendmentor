@@ -14,7 +14,6 @@ function App() {
   const [word, setWord] = useState<string>('')
   const [data, setData] = useState<dataTypes>()
   const [meanings, setMeanings] = useState<Array<any>>()
-  const [audio, setAudio] = useState<string>('')
   const wordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setWord(event?.target.value)
   }
