@@ -6,7 +6,7 @@ const FetchAPI = async (word: string) => {
     const { meanings, phonetics, sourceUrls } = response.data[0]
     return { word, meanings, phonetics, sourceUrls }
   } catch (error) {
-    console.log(error)
+    return false
   }
 }
 
