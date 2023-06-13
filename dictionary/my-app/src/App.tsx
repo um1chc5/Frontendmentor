@@ -3,12 +3,12 @@ import './App.css'
 import FetchAPI from './api/fetchAPI'
 import Meanings from './Components/meanings/Meanings'
 import Error from './Components/error'
-import { DataTypes } from './types/data.type'
+import { DataTypes, Meaning, Phonetic } from './types/data.type'
 
 function App() {
   const [word, setWord] = useState<string>('')
   const [data, setData] = useState<DataTypes>()
-  const [meanings, setMeanings] = useState<Array<any>>()
+  const [meanings, setMeanings] = useState<Meaning[]>()
   const [errorState, setError] = useState<boolean>(false)
   const wordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setWord(event?.target.value)
@@ -30,12 +30,12 @@ function App() {
     fetchData()
   }
 
-  const phoneticsHandle = (phonetics: any) => {
+  const phoneticsHandle = (phonetics: Phonetic[] | undefined) => {
     const phonetic = phonetics?.filter((element: any) => {
       return element.audio !== '' && element.text
     })
 
-    if (phonetics) return phonetic[0]
+    if (phonetics && phonetic) return phonetic[0]
   }
 
   const audioElement = React.useRef<HTMLAudioElement>(null)
